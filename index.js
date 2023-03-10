@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import cors from 'cors'
 import authRoute from './routes/auth.js'
+import taskRoute from './routes/task.js'
 
 
 const app = express()
@@ -20,6 +21,7 @@ app.use(express.json())
 
 // Routes
 app.use('/api/auth', authRoute)
+app.use('/api/task', taskRoute)
 
 async function start() {
     try {
